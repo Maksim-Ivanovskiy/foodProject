@@ -425,7 +425,17 @@ window.addEventListener('DOMContentLoaded', () =>{
         plusSlides(1);
     }); */
 
+    //Calc
 
+    const result = document.querySelector('.calculating__result span');
+    let sex, height, weight, age, ratio;
+
+    function calcTotal() {
+        if (!sex || !height || !weight || !age || !ratio) {
+            result.textContent = '____';
+            return;
+        }
+    }
 
 });
 
