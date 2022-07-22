@@ -448,21 +448,24 @@ window.addEventListener('DOMContentLoaded', () =>{
     function getStaticInformation(parentSelector, activeClass) {
         const elements = document.querySelectorAll(`${parentSelector} div`);
 
-        document.querySelector(parentSelector).addEventListener('click', (e) => {
-            if (e.target.getAttribute('data-ratio')) {
-                ratio = + e.target.getAttribute('data-ratio');
-            } else {
-                sex = e.target.getAttribute('id');
-            }
-
-            elements.forEach(elem => {
-                elem.classList.remove(activeClass);
+        elements.forEach(elem => {
+            elem.addEventListener('click', (e) => {
+                if (e.target.getAttribute('data-ratio')) {
+                    ratio = + e.target.getAttribute('data-ratio');
+                } else {
+                    sex = e.target.getAttribute('id');
+                }
+    
+                elements.forEach(elem => {
+                    elem.classList.remove(activeClass);
+                });
+    
+                e.target.classList.add(activeClass);
+    
+                calcTotal();
             });
-
-            e.target.classList.add(activeClass);
-
-            calcTotal();
         });
+
     }
 
     getStaticInformation('#gender', 'calculating__choose-item_active');
