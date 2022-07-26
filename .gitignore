@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/webpack-demo
 
 # testing
 /coverage
@@ -10,6 +9,7 @@
 # production
 /build
 /dist
+/webpack-demo
 
 # misc
 .DS_Store
