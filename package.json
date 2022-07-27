@@ -12,6 +12,10 @@
   },
   "aujson-server --watch db.jsonthor": "",
   "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
   "bugs": {
     "url": "https://github.com/Maksim-Ivanovskiy/foodProject/issues"
   },
